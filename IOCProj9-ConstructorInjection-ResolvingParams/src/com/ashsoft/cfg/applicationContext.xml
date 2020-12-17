@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<bean id="std1Bean" class="com.ashsoft.beans.Student">
+		<constructor-arg value="Ashish" />
+		<constructor-arg value="Hyd" />
+		<constructor-arg value="85.5f" />
+		<constructor-arg value="101" />
+	</bean>
+	<bean id="std2Bean" class="com.ashsoft.beans.Student">
+
+		<constructor-arg value="Shekar" />
+		<constructor-arg value="Hyd" />
+
+	</bean>
+	<bean id="std3Bean" class="com.ashsoft.beans.Student">
+		<constructor-arg value="1" />
+		<constructor-arg value="Raghu" />
+		<constructor-arg value="Hyd" />
+	</bean>
+	
+	<!-- Resolving Constructor Params using index < -->
+	<bean id="mksBean" class="com.ashsoft.beans.Marks">
+		<constructor-arg value="67" index="0" />
+		<constructor-arg value="75" index="2" />
+		<constructor-arg value="79" index="1" />
+	</bean>
+
+	<!-- Resolving Constructor Params using type < -->
+	<bean id="personBean" class="com.ashsoft.beans.Person">
+		<constructor-arg type="long" value="784521122" />
+		<constructor-arg type="String" value="Raj" />
+		<constructor-arg type="int" value="101" />
+	</bean>
+</beans>
