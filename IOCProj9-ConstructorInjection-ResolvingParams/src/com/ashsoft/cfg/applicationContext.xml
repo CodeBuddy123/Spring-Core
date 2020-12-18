@@ -23,7 +23,7 @@
 		<constructor-arg value="Raghu" />
 		<constructor-arg value="Hyd" />
 	</bean>
-	
+
 	<!-- Resolving Constructor Params using index < -->
 	<bean id="mksBean" class="com.ashsoft.beans.Marks">
 		<constructor-arg value="67" index="0" />
@@ -36,5 +36,12 @@
 		<constructor-arg type="long" value="784521122" />
 		<constructor-arg type="String" value="Raj" />
 		<constructor-arg type="int" value="101" />
+	</bean>
+
+	<!-- Resolving Constructor Params using Name < -->
+	<bean id="customerBean" class="com.ashsoft.beans.Customer">
+		<constructor-arg name="custName"  value="Ashish" />
+		<constructor-arg name="custAdd"  value="Hyd" />
+		<constructor-arg name="custNo"  value="121" />
 	</bean>
 </beans>
